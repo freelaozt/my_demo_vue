@@ -1,0 +1,236 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+/* BASE */
+html, body { height: 100% !important; height:auto; margin: 0 auto; }
+html { font-size:100%; }
+body {font-size:16px;
+  color:#000;
+  font-family: 'Roboto Condensed', 
+  sans-serif;
+  text-decoration:none;margin:0;padding:0;}
+
+  
+.bgimg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-width: 1000px;
+    z-index: -10;
+    zoom: 1;
+    background: url("https://ss2.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/d000baa1cd11728b5aaa11cbc9fcc3cec2fd2c57.jpg")
+      no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-position: center 0;
+    /* background-color: rgba(0, 0, 0, 0.9); */
+    /* opacity: 0.6; */
+  }
+  
+  /* COLOR SETUP */
+  :root {
+    --primary-color: #4280e6;
+    --secondary-color: #75a9ff;
+    --third-color: #0d0d0d;
+    --primary-bgcolor: #000;
+    --ratingstars-color: #ffb109;
+  }
+  
+  a {
+    /* color: #fff; */
+    text-decoration: none;
+    outline: none;
+  }
+  
+  a:hover,
+  a:active,
+  a:focus {
+    outline: none;
+  }
+  
+  a:hover,
+  a:focus {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* MISC */
+  .ratings {
+    display: block;
+    color: var(--ratingstars-color);
+    margin: 20px 0;
+  }
+  
+  .play-btn {
+    padding: 18px 20px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.4);
+    display: inline-block;
+    z-index: 999;
+  
+    transition: all 0.1s linear 0s;
+  }
+  
+  .play-btn-border {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    padding: 2px;
+    display: inline-block;
+    z-index: 2;
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transition: all 0.1s linear 0s;
+    transform: translate(-50%, -50%) scale(1.4, 1.4);
+  }
+  
+  .post:hover .play-btn-border {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1, 1);
+  }
+  
+  .play-btn-border i:hover {
+    border: 5px solid var(--secondary-color);
+    padding: 10px 14px;
+    border-radius: 50%;
+    color: #fff;
+  }
+  
+  .fa-play-circle {
+    color: #fff;
+    border: 10px;
+    font-size: 36px !important;
+    transition: all 0.1s linear 0s;
+  }
+  
+  .post:hover .fa-play-circle {
+    color: #fff;
+  }
+  
+  .post:hover .play-btn {
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 1;
+  }
+  
+  a.title {
+    opacity: 1;
+    transition: all 0.1s linear 0s;
+  }
+  a.title:hover {
+    opacity: 0.6;
+  }
+  
+  a.post-thumb {
+    background-color: #000000;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  
+  .post {
+    transition: all 0.1s linear 0s;
+  }
+  .post:hover img {
+    opacity: 0.4;
+    -moz-opacity: 0.4;
+    -webkit-opacity: 0.4;
+    filter: alpha(opacity=40);
+    transform: scale(1.2);
+    border-radius: 8px;
+  }
+  .post img {
+    opacity: 1;
+    transition: all 0.1s linear 0s;
+  }
+  .thumbr img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .post:hover .thumbr {
+    transition: all 0.1s linear 0s;
+    z-index: 999;
+    transform: scale(1.02);
+  }
+  
+  .post:hover .thumbr {
+    -webkit-box-shadow: 0px 30px 13px -21px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 30px 13px -21px rgba(0, 0, 0, 1);
+    box-shadow: 0px 30px 13px -21px rgba(0, 0, 0, 1);
+  }
+  
+  .headline-round {
+    border: 5px solid var(--primary-color);
+    padding: 10px 10px;
+    border-radius: 45%;
+    color: #fff;
+  }
+  
+  .posts-txt {
+    color: #fff;
+    font-size: 14px;
+    text-align: left;
+  }
+  .posts-txt i {
+    color: #fff;
+    padding-right: 15px;
+  }
+  .fa-thumbs-up {
+    color: #fff;
+  }
+  .infor .ratings {
+    float: right;
+    display: inline-block;
+    margin: 0;
+  }
+  
+  /* VIDEO TIME */
+  .cactus-note.ct-time {
+    left: auto;
+    margin-left: auto;
+    margin-right: 12px;
+    right: 0;
+    font-size: 12px;
+  }
+  
+  .cactus-note {
+    background-color: var(--primary-color);
+    bottom: 0;
+    color: #fff;
+    left: 0;
+    line-height: 1;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 15px;
+    padding: 5px 10px;
+    position: absolute;
+    z-index: 500;
+    border-radius: 3px;
+  }
+/* ---------加载START--------- */
+  .content {
+    width: 100%;
+    min-height: 100vh;
+  }
+  .loading {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+  }
+  /* ---------加载END--------- */
